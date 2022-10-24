@@ -4,12 +4,12 @@ import FiltersList from "../../components/FiltersList/FiltersList";
 
 const Nav = (props) => {
     
-    const { search, handleInput, filterBeers } = props
+    const { search, handleInput, handleAbv } = props
 
     return (
 <div className="sidenav">
             <SearchBox search={search} handleInput={handleInput} />
-            <FiltersList filterBeers = {filterBeers} />
+            <FiltersList filterBeers = {handleAbv} />
         </div>
     )
 }

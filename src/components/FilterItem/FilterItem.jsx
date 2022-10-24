@@ -6,15 +6,15 @@ const FilterItem = (props) => {
 
 
     return (
-        <>
+        <div className="checkbox">
         <label htmlFor = {filterBy} > {filterLabel} </label>
         <input 
         type="checkbox" 
         id={filterBy}
         name={filterBy} 
         className="filter-item"
-        onClick={filterBeers} />
-        </>
+        onChange={filterBeers} />
+        </div>
     )
 }
 
