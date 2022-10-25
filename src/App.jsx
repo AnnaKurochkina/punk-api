@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-
-import beers from "./data/beers";
+import React, { useState, useEffect } from "react";
 
 import './App.scss';
 import CardList from "./components/CardList/CardList";
@@ -9,10 +7,25 @@ import Card from "./components/Card/Card";
 
 const App = () => {
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [beers, setBeers] = useState([]);
   const [search, setSearch] = useState("");
   const [isHighAbv, setHighAbv] = useState(false);
   const [isClassic, setClassic] = useState(false);
   const [isAcidic, setAcidic] = useState(false);
+
+  const getBeers = async () => {
+    const url = `https://api.punkapi.com/v2/beers `;
+    const res = await fetch(url);
+    const beerData = await res.json();
+    setIsLoading(false);
+    setBeers(beerData);
+  };
+
+  useEffect(() => {
+    setIsLoading(true);
+    getBeers();
+  }, []);
 
   const yearBrewed = (beer) => {
     const parts = beer.first_brewed.split("/");
@@ -46,6 +59,9 @@ const App = () => {
     acidic: {current: isAcidic, change: setAcidic}
   }
 
+  if (isLoading) {
+    return <div>Loading...</div>
+  }
   return (
     <div className="App">
       <div className="main">
