@@ -1,17 +1,15 @@
 import "./FiltersList.scss";
 import FilterItem from "../FilterItem/FilterItem";
 
-const FiltersList = (props) => {
-
-    const { filterBeers, abv } = props;
+const FiltersList = ({filters}) => {
 
     return (
         <div>
-        <div className = "filters"> 
-        <FilterItem filterBy = {abv} filterLabel = "High ABV (> 6.0%)" filterBeers = {filterBeers}/> 
-        <FilterItem filterBy = "yearBrewed" filterLabel = "Classic" filterBeers = {filterBeers}/> 
-        <FilterItem filterBy = "ph" filterLabel = "Acidic (pH < 4)" filterBeers = {filterBeers}/> 
-        </div>
+            <div className = "filters"> 
+                <FilterItem filterBy="abv" filterLabel="High ABV (> 6.0%)" isChecked={filters.highAbv.current} setChecked={filters.highAbv.change}/> 
+                <FilterItem filterBy="yearBrewed" filterLabel="Classic" isChecked={filters.classic.current} setChecked={filters.classic.change}/> 
+                <FilterItem filterBy="ph" filterLabel="Acidic (pH < 4)" isChecked={filters.acidic.current} setChecked={filters.acidic.change}/> 
+            </div>
         </div>
     )
 }

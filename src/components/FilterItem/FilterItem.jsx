@@ -1,19 +1,21 @@
 import "./FilterItem.scss";
 
-const FilterItem = (props) => {
+const FilterItem = ({filterBy, filterLabel, isChecked, setChecked}) => {
 
-    const { filterBy, filterLabel, filterBeers } = props;
-
+    const toggleState = () => {
+        setChecked(!isChecked);
+    };
 
     return (
         <div className="checkbox">
-        <label htmlFor = {filterBy} > {filterLabel} </label>
+        <label htmlFor={filterBy}>{filterLabel}</label>
         <input 
-        type="checkbox" 
-        id={filterBy}
-        name={filterBy} 
-        className="filter-item"
-        onChange={filterBeers} />
+            type="checkbox" 
+            id={filterBy}
+            name={filterBy}
+            className="filter-item"
+            onChange={toggleState}
+            checked={isChecked}/>
         </div>
     )
 }
