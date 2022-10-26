@@ -7,8 +7,7 @@ const Nav = ({search, setSearch, filters}) => {
     return (
         <div className="sidenav">
             <SearchBox search={search}
-            setSearch={setSearch}
-            />
+            setSearch={setSearch}/>
             <FiltersList filters={filters}/>
         </div>
     )

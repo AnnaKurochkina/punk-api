@@ -15,7 +15,7 @@ const App = () => {
   const [isAcidic, setAcidic] = useState(false);
 
   const getBeers = async () => {
-    const url = `https://api.punkapi.com/v2/beers `;
+    const url = `https://api.punkapi.com/v2/beers`;
     const res = await fetch(url);
     const beerData = await res.json();
     setIsLoading(false);
@@ -64,12 +64,12 @@ const App = () => {
   }
   return (
     <div className="App">
-      <div className="main">
         <Nav 
           search={search} 
           setSearch={setSearch}
           filters={filters}
         />
+      <div className="main">
         <CardList cards={beerCards}/>
       </div>
     </div>

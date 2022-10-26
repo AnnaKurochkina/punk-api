@@ -1,14 +1,27 @@
-
-
 .card-grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(20, 1fr);
-    // gap: 1rem;
+    gap: 3rem;
     text-align: center;
     justify-content: center;
-
-    z-index: 1000;
-
-    margin-left: 25rem;
+    margin: 3rem;
+    margin-top: 0;
 }
+
+@media screen and (max-width: 835px) {
+        .card-grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(20, 1fr);
+            gap: 1rem;
+            margin: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .card-grid-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }

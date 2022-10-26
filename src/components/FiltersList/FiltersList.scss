@@ -1,0 +1,30 @@
+@import "../../data/sass/_variables.scss";
+
+.filters {
+    display: block;
+    margin: 20px;
+    margin-top: 2rem;
+
+    &__item {
+        display: block;
+        margin: 20px;
+        text-align: start;
+        color: $color-search;
+
+        label {
+            margin-left: .5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 835px) {
+    .filters {
+        display: inline;
+        margin-top: 0;
+
+        &__item {
+            display: inline;
+            margin: 0;
+        }
+    }
+}

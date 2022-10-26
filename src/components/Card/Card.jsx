@@ -1,24 +1,21 @@
 import "./Card.scss";
 
-const Card = (props) => {
+const Card = ({name, tagline, description, image_url, abv, first_brewed, ph}) => {
 
-    const {name, tagline, description, image_url, abv, first_brewed, ph, } = props;
-
-
+    const shortenedText = description.length < 190 ? description : description.substring(0, description.lastIndexOf(".", 200)) + ".";
 
     return (
-    <div className="card">
-        <img className="card__card-img" src = {image_url} alt="beer" />
-        {/* <div className="card__card-body"> */}
-            <h1 className="card__card-title">{name}</h1>
-            <h2 className="card__card-tagline">{tagline}</h2>
-            <p className="card__card-description">{description}</p>
-            <h4>abv: {abv}   first_brewed: {first_brewed}   ph: {ph}</h4>
-            {/* <p className="card__abv">{abv}</p>
-            <p className="card__first-brewed">{first_brewed}</p>
-            <p className="card__ph">{ph}</p> */}
-        {/* </div> */}
-    </div>
+        <div className="card">
+            <div className="card__top">
+            <img className="card__card-img" src = {image_url} alt={name} />
+            </div>
+                <h1 className="card__card-title">{name}</h1>
+                <h3 className="card__card-tagline">{tagline}</h3>
+                <p className="card__card-description">{shortenedText}</p>
+                <p>ABV: {abv}</p>
+                <p>First Brewed: {first_brewed}</p>
+                <p>pH: {ph}</p>
+        </div>
     )
 }
 

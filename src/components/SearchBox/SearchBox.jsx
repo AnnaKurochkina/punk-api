@@ -8,7 +8,7 @@ const SearchBox = ({search, setSearch}) => {
 
     return (
         <form className="searchbox">
-            <label htmlFor="search">Start typing beer name</label>
+            <label htmlFor="search">Beer search</label>
             <input
                 id="search"
                 className="searchbox__input"
@@ -20,4 +20,6 @@ const SearchBox = ({search, setSearch}) => {
         </form>
     )
 }
+
+
 export default SearchBox;

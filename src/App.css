@@ -1,9 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,700;1,400&family=Trade+Winds&display=swap");
 .App {
-  display: flex;
   text-align: center;
+  font-family: "Trade Winds", cursive;
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
+  margin-left: 15rem;
+  background-color: #481D0Dff;
+}
+
+@media screen and (max-width: 835px) {
+  .main {
+    margin-top: 8rem;
+    margin-left: 0;
+  }
 }
