@@ -2,7 +2,7 @@ import "./Card.scss";
 
 const Card = ({name, tagline, description, image_url, abv, first_brewed, ph}) => {
 
-    const shortenedText = description.length < 190 ? description : description.substring(0, description.lastIndexOf(".", 200)) + ".";
+    const shortenedText = description.length < 200 ? description : description.substring(0, description.lastIndexOf(".", 200)) + ".";
 
     return (
         <div className="card">

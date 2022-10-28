@@ -1,33 +1,8 @@
-
-// $color-card-background: #623E22ff;
-
-// $eggshell: #F4EFD8ff;
-// $coffee: #755038ff;
-// $copper: #B6814Dff;
-// $dark-sienna: #270D06ff;
-// $gold-crayola: #E6C58Cff;
-// $seal-brown: #481D0Dff;
-// $onyx: #404041ff;
-// $black-chocolate: #26241Cff;
-// $camel: #CBA471ff;
-// $raw-umber: #906942ff;
-// $coffee: #755038ff;
-// $raw-umber: #906942ff;
-// $eggshell: #F4EFD8ff;
-// $copper: #B6814Dff;
-// $onyx: #404041ff;
-// $van-dyke-brown: #623E22ff;
-// $smoky-black: #0A0403ff;
-// $gold-crayola: #E6C58Cff;
-// $black-chocolate: #1A1612ff;
-// $seal-brown: #481D0Dff;
-
-
-@import "../../data/sass/_variables.scss";
+@import "../../Utilities/variables.scss";
 
 .card {
     color: $color-text;
-    background-image: url("../../pictures/wooden-wall.png");
+    background-image: url("../../data/pictures/wooden-wall.png");
     border-radius: 1rem;
     text-shadow: $color-shadow 2px 2px 2px;
     margin-top: 20px;
