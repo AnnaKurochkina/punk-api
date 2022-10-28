@@ -30,3 +30,5 @@ Classic Range (Was first brewed before 2010)
 High Acidity (pH lower than 4) 
 
 3 - Style the website however you see fit! Go wild!
+
+![image](https://user-images.githubusercontent.com/73474619/198562010-081f5a2c-afcb-43bf-a10c-9374b57b377a.png)
