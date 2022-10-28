@@ -42,6 +42,7 @@ test('should render a card "Buzz" when search input is "buzz"', async () => {
   const cardNameInput = screen.getByRole("textbox", {name : "Beer search"})
   userEvent.type(cardNameInput, "buzz");
   const cards = container.getElementsByClassName("card");
+
   expect(cards.length).toBe(1);
   expect(cards[0].innerHTML).toContain("Buzz");
 });
@@ -53,6 +54,7 @@ test('should render all cards with high ABV when checkbox High ABV is checked', 
   const checkboxABV = screen.getByRole('checkbox', {name : "High ABV"});
   userEvent.click(checkboxABV);
   const cards = container.getElementsByClassName("card");
+  
   expect(cards.length).toBe(2);
 })
 

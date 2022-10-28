@@ -5,11 +5,12 @@
 .App {
   text-align: center;
   font-family: 'Trade Winds', cursive;
+  background-color: $color-background;
+  height: 100%;
 }
 
 .main {
 margin-left: 15rem;
-background-color: $color-background;
 }
 
 @media screen and (max-width: 835px) {

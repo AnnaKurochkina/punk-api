@@ -2,11 +2,12 @@
 .App {
   text-align: center;
   font-family: "Trade Winds", cursive;
+  background-color: #481D0Dff;
+  height: 100%;
 }
 
 .main {
   margin-left: 15rem;
-  background-color: #481D0Dff;
 }
 
 @media screen and (max-width: 835px) {

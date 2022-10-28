@@ -23,7 +23,6 @@ const App = () => {
   };
 
   useEffect(() => {
-    setIsLoading(true);
     getBeers();
   }, []);
 
